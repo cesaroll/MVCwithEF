@@ -1,0 +1,82 @@
+﻿@using Section12
+@{
+    Layout = null;
+    List<Qual> QL = new List<Qual>();
+    QL.Add(new Qual() { Id = 0, Q = "" });
+    QL.Add(new Qual() { Id = 1, Q = "B.Tech" });
+    QL.Add(new Qual() { Id = 1, Q = "M.Tech" });
+    QL.Add(new Qual() { Id = 1, Q = "MCA" });
+    QL.Add(new Qual() { Id = 1, Q = "MBA" });
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        
+        @using (Html.BeginForm("Insert", "Home", FormMethod.Post))
+        {
+            <table>
+                <tr>
+                    <td>@Html.Label("Enter Your Name:")</td>
+                    <td>@Html.TextBox("Name")</td>
+                </tr>
+                <tr>
+                    <td>@Html.Label("Enter Your Age:")</td>
+                    <td>@Html.TextBox("Age")</td>
+                </tr>
+                <tr>
+                    <td>@Html.Label("Select Your Gender:")</td>
+                    <td>
+                        @Html.RadioButton("Gender","M")<span>Male</span>
+                        @Html.RadioButton("Gender","F")<span>Female</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>"Select Qualification:"</td>
+                    <td>
+                        @Html.DropDownList("Qualification", new SelectList(QL, "Id", "Q"))
+                        @Html.ListBox("QualificationList", new SelectList(QL, "Id", "Q"))
+                    </td>
+                </tr>
+                <tr>
+                    <td>@Html.Label("Enter your address:")</td>
+                    <td>
+                        @Html.TextArea("Address")
+                    </td>
+                </tr>
+                <tr>
+                    <td>@Html.Label("Enter your email Address:")</td>
+                    <td>
+                        @Html.TextBox("Email")
+                    </td>
+                </tr>
+                <tr>
+                    <td>@Html.Label("I agree Terms and Conditions")</td>
+                    <td>@Html.CheckBox("Accept")</td>
+                </tr>
+                <tr>
+                    <td>@Html.Label("Upload Your Resume")</td>
+                    <td>
+                        @Html.TextBox("Resume", "", new { type = "file" })
+                    </td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        @Html.TextBox("Submit","Submit",new { type="submit"})
+                        @Html.TextBox("Reset", "Reset", new { type = "reset" })
+                    </td>
+                </tr>
+            </table>
+        }
+        
+    </div>
+</body>
+</html>

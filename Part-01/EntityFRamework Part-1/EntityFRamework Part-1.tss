@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<ArrayOfArrayOfArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ArrayOfArrayOfString>
+    <ArrayOfString>
+      <string>c:\my_data_personal\tech\workspaces\udemy\mvc with ef\part-01\entityframework part-1\entityframework part-1\organizationmodel.context.cs</string>
+      <string>c:\my_data_personal\tech\workspaces\udemy\mvc with ef\part-01\entityframework part-1\entityframework part-1\organizationmodel.edmx</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>c:\my_data_personal\tech\workspaces\udemy\mvc with ef\part-01\entityframework part-1\entityframework part-1\web.config</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>c:\my_data_personal\tech\workspaces\udemy\mvc with ef\part-01\entityframework part-1\entityframework part-1\emp.aspx</string>
+      <string>c:\my_data_personal\tech\workspaces\udemy\mvc with ef\part-01\entityframework part-1\entityframework part-1\emp.aspx.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>c:\my_data_personal\tech\workspaces\udemy\mvc with ef\part-01\entityframework part-1\entityframework part-1\deptmanagement.aspx</string>
+      <string>c:\my_data_personal\tech\workspaces\udemy\mvc with ef\part-01\entityframework part-1\entityframework part-1\deptmanagement.aspx.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>c:\my_data_personal\tech\workspaces\udemy\mvc with ef\part-01\entityframework part-1\entityframework part-1\imd-def.aspx</string>
+      <string>c:\my_data_personal\tech\workspaces\udemy\mvc with ef\part-01\entityframework part-1\entityframework part-1\imd-def.aspx.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>c:\my_data_personal\tech\workspaces\udemy\mvc with ef\part-01\entityframework part-1\entityframework part-1\navigationproperties.aspx</string>
+      <string>c:\my_data_personal\tech\workspaces\udemy\mvc with ef\part-01\entityframework part-1\entityframework part-1\navigationproperties.aspx.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>c:\my_data_personal\tech\workspaces\udemy\mvc with ef\part-01\entityframework part-1\entityframework part-1\lazyloading.aspx</string>
+      <string>C:\My_Data_Personal\Tech\Workspaces\Udemy\MVC with EF\Part-01\EntityFRamework Part-1\EntityFramework Part-1\LazyLoading.aspx.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>Source Control Explorer</string>
+    </ArrayOfString>
+  </ArrayOfArrayOfString>
+</ArrayOfArrayOfArrayOfString>

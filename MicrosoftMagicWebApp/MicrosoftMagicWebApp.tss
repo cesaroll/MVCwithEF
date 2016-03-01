@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<ArrayOfArrayOfArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ArrayOfArrayOfString>
+    <ArrayOfString>
+      <string>Source Control Explorer</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>c:\my_data_personal\tech\workspaces\udemy\mvc with ef\microsoftmagicwebapp\microsoftmagicwebapp\global.asax.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\My_Data_Personal\Tech\Workspaces\Udemy\MVC with EF\MicrosoftMagicWebApp\MicrosoftMagicWebApp\OrganizationModel.edmx</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>c:\my_data_personal\tech\workspaces\udemy\mvc with ef\microsoftmagicwebapp\microsoftmagicwebapp\web.config</string>
+    </ArrayOfString>
+  </ArrayOfArrayOfString>
+</ArrayOfArrayOfArrayOfString>

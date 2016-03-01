@@ -1,0 +1,50 @@
+﻿@model DAL2.Department
+           
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    <fieldset>
+        <legend>Edit Department</legend>
+
+        <div>
+            @Html.LabelFor(model => model.Id)
+        </div>
+        <div>
+            @Html.EditorFor(model => model.Id)
+        </div>
+
+        <div>
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div>
+            @Html.EditorFor(model => model.Name)
+        </div>
+
+        <div>
+            @Html.LabelFor(model => model.HOD)
+        </div>
+        <div>
+            @Html.EditorFor(model => model.HOD)
+        </div>
+
+        <div>
+            @Html.LabelFor(model => model.Gender)
+        </div>
+        <div>
+            @Html.EditorFor(model => model.Gender)
+        </div>
+        
+        <p>
+            <input id="Submit1" type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

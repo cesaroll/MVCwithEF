@@ -1,0 +1,67 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        Welcome! @DateTime.Now.ToString() <b>Good</b> <br/>
+        @{
+            int a = 10, b = 20, c;
+            c = a + b;
+
+            int[] arr = {56, 78, 90, 45, 34};
+        }
+        <br/>Your result is @c.
+        @if (a > b)
+        {
+            <p>The greater is @a.</p>
+        }
+        else
+        {
+        <p>The greater is @b.</p>
+        }
+        <br/>
+        
+        <ul>
+            @foreach (var item in arr)
+            {
+                <li>@item</li>
+            }
+        </ul>
+
+        <p>
+            Your email is cesarl@@outlook.com
+        </p>
+    </div>
+    <br />
+
+    <div>
+        <form method="POST" action="Home\MyActionSubmit">
+            <table>
+                <tr>
+                    <td>Enter Your Name:</td>
+                    <td><input id="Name" name="Name" type="text" value="" /></td>
+                </tr>
+                <tr>
+                    <td>Enter Your Age:</td>
+                    <td>
+                        @Html.TextBox("Age");
+                        @*<input id="Age" name="Age" type="text" value="" />*@
+                    </td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td><input type="submit" value="Submit" /></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

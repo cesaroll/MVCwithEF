@@ -1,0 +1,45 @@
+﻿@model DAL2.Department
+           
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Department</legend>
+    
+    <div>
+        @Html.DisplayNameFor(model => model.Id)
+    </div>
+    <div>
+        @Html.DisplayFor(model => model.Id)
+    </div>
+    
+    <div>
+        @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div>
+        @Html.DisplayFor(model => model.Name)
+    </div>
+    
+    <div>
+        @Html.DisplayNameFor(model => model.HOD)
+    </div>
+    <div>
+        @Html.DisplayFor(model => model.HOD)
+    </div>
+    
+    <div>
+        @Html.DisplayNameFor(model => model.Gender)
+    </div>
+    <div>
+        @Html.DisplayFor(model => model.Gender)
+    </div>
+
+</fieldset>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

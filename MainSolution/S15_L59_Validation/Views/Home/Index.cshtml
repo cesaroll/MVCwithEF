@@ -1,0 +1,108 @@
+﻿@using S15_L59_Validation.Models
+
+@model User
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script src="~/Scripts/jquery-1.8.0.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("Create", "Home", FormMethod.Post))
+        {
+            <h4>User</h4>
+            <hr/>
+            
+            <div>
+                @Html.LabelFor(m => m.UserName)
+                <div>
+                    @Html.EditorFor(m => m.UserName)
+                    @Html.ValidationMessageFor(m => m.UserName)
+                </div>
+            </div>
+
+            <div>
+                @Html.LabelFor(m => m.Password)
+                <div>
+                    @Html.EditorFor(m => m.Password)
+                    @Html.ValidationMessageFor(m => m.Password)
+                </div>
+            </div>
+
+            <div>
+                @Html.LabelFor(m => m.ConfirmPassword)
+                <div>
+                    @Html.EditorFor(m => m.ConfirmPassword)
+                    @Html.ValidationMessageFor(m => m.ConfirmPassword)
+                </div>
+            </div>
+
+            <div>
+                @Html.LabelFor(m => m.Qualification)
+                <div>
+                    @Html.DropDownListFor(m => m.Qualification, (List<SelectListItem>)ViewBag.Qualifications)
+                    @Html.ValidationMessageFor(m => m.Qualification)
+                </div>
+            </div>
+
+            <div>
+                @Html.LabelFor(m => m.Gender)
+                <div>
+                    @Html.RadioButtonFor(m => m.Gender, "M")<span>M</span>
+                    @Html.RadioButtonFor(m => m.Gender, "F")<span>F</span>
+                    @Html.ValidationMessageFor(m => m.Gender)
+                </div>
+            </div>
+
+            <div>
+                @Html.LabelFor(m => m.CurrentCTC)
+                <div>
+                    @Html.EditorFor(m => m.CurrentCTC)
+                    @Html.ValidationMessageFor(m => m.CurrentCTC)
+                </div>
+            </div>
+
+            <div>
+                @Html.LabelFor(m => m.ExpectedCTC)
+                <div>
+                    @Html.EditorFor(m => m.ExpectedCTC)
+                    @Html.ValidationMessageFor(m => m.ExpectedCTC)
+                </div>
+            </div>
+
+            <div>
+                @Html.LabelFor(m => m.Email)
+                <div>
+                    @Html.EditorFor(m => m.Email)
+                    @Html.ValidationMessageFor(m => m.Email)
+                </div>
+            </div>
+
+            <div>
+                @Html.LabelFor(m => m.Url)
+                <div>
+                    @Html.EditorFor(m => m.Url)
+                    @Html.ValidationMessageFor(m => m.Url)
+                </div>
+            </div>
+            
+            <div>
+                <div>
+                    <input type="submit" value="Create"/>
+                </div>
+            </div>
+
+        } 
+    </div>
+</body>
+</html>

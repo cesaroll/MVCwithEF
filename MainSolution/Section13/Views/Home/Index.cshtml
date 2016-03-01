@@ -1,0 +1,76 @@
+﻿@using System.Activities.Statements
+@using DAL2
+@{
+    MyTable myTableEntity = ViewBag.MyTable;
+
+    List<MyTable> myTabRecs = ViewBag.MyTabRecs;
+        
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+    <body>
+        <div>
+            <fieldset>
+                <legend>Grid</legend>
+
+                <table>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                    </tr>
+                    @foreach (var item in myTabRecs)
+                    {
+                        <tr>
+                            <td>@item.Id</td>
+                            <td>@item.Name</td>
+                            <td>@item.Age</td>
+                    </tr>
+                    }
+                </table>
+            </fieldset>
+        </div>
+        <div>
+            @using (Html.BeginForm("Read", "Home", FormMethod.Get))
+            {
+                <fieldset>
+                    <legend>MyTable</legend>
+                    <table>
+                        <tr>
+                            <td>@Html.Label("Enter Id Here:")</td>
+                            <td>@Html.TextBox("ID")</td>
+                        </tr>
+                        <tr>
+                            <td>@Html.Label("Name:")</td>
+                            <td>@if (myTableEntity != null)
+                                {
+                                    @myTableEntity.Name;
+                                }
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>@Html.Label("Age:")</td>
+                            <td>@if (myTableEntity != null)
+                                {
+                                    @myTableEntity.Age;
+                                }
+                            </td>
+                        </tr>
+                        <tr></tr>
+                        <tr>
+                            <td></td>
+                            <td>@Html.TextBox("Submit", "Submit", new {type="submit"})</td>
+                        </tr>
+                    </table>
+                </fieldset>
+            }
+        </div>
+    </body>
+</html>

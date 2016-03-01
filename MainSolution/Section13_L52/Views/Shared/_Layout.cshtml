@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+    <body>
+        
+        <table>
+            
+            <tr style="height: 40px;">
+                <td>
+                    <h1>Header</h1>
+                    
+                    @Html.ActionLink("Home", "Index", "Home") |
+                    @Html.ActionLink("About Us", "Index", "AboutUs") |
+                    @Html.ActionLink("Services", "Index", "Services") |
+                    @Html.ActionLink("Contact Us", "Index", "ContactUs") |
+
+                </td>
+            </tr>
+
+            <tr style="height: 300px;">
+                <td>
+                    @RenderBody()
+                </td>
+            </tr>
+
+            <tr style="height: 30px">
+                <td><h3>Footer</h3></td>
+            </tr>
+
+        </table>
+        
+
+        @Scripts.Render("~/bundles/jquery")
+        @RenderSection("scripts", required: false)
+    </body>
+</html>

@@ -1,0 +1,47 @@
+﻿@model DAL2.Department
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @using (@Html.BeginForm("Insert", "Home", FormMethod.Post))
+        {
+            <table>
+                <tr>
+                    <td>Enter Department Name:</td>
+                    <td>@Html.TextBoxFor(x => x.Name)</td>
+                </tr>
+                <tr>
+                    <td>Enter HOD Name:</td>
+                    <td>@Html.TextBoxFor(x => x.HOD)</td>
+                </tr>
+                <tr>
+                    <td>Select Gender</td>
+                    <td>
+                        @Html.RadioButtonFor(x => x.Gender, "M", true)<span>Male</span>
+                        @Html.RadioButtonFor(x => x.Gender, "F", false)<span>Female</span>
+                    </td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input id="Submit" type="submit" value="submit" />
+                        <input id="Reset" type="reset" value="reset" />
+                    </td>
+
+                </tr>
+            </table>
+        }
+    </div>
+</body>
+</html>
